@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ReminderApp</string>
+    <string name="empty_reminder_page_msg">No Reminders Set Click + to add the reminders</string>
+</resources>
