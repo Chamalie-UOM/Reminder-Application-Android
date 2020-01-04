@@ -37,6 +37,7 @@ public class MainReminderActivity extends AppCompatActivity {
     private AdapterReminders adapter;
     private List<Reminders> temp;
     private TextView empty;
+    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,15 @@ public class MainReminderActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainReminderActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
         setItemsInRecyclerView();
+
+        back = findViewById(R.id.button);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainReminderActivity.this, MainLightActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
     }
 
